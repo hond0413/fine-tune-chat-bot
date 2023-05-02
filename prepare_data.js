@@ -3,6 +3,7 @@ const fs = require("fs");
 
 // you should change the output file name
 const outputFileName = "ohmurasan.jsonl";
+const aiName = "ohmurasan";
 
 const supple = "[Enter a blank line to continue.]";
 
@@ -14,7 +15,7 @@ const rl = readline.createInterface({
 let lineCount = 0;
 let prompt = `{"prompt": "`;
 function createPrompt() {
-  const label = lineCount % 2 === 0 ? "human" : "ohmurasan";
+  const label = lineCount % 2 === 0 ? "human" : aiName;
   console.log(`Enter prompt ${label} ${supple}: `);
   rl.question("", (line) => {
     if (line === "") {
