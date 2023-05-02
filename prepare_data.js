@@ -17,7 +17,7 @@ function createPrompt() {
   const label = lineCount % 2 === 0 ? "human" : "ohmurasan";
   console.log(`Enter prompt ${label} ${supple}: `);
   rl.question("", (line) => {
-    if (line === "" && lineCount % 2 === 0) {
+    if (line === "") {
       prompt += `\\n\\n###\\n\\n",`;
       console.log(prompt + "\n");
       createCompletion();
