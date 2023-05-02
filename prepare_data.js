@@ -2,7 +2,7 @@ const readline = require("readline");
 const fs = require("fs");
 
 // you should change the output file name
-const outputFileName = "test.txt";
+const outputFileName = "ohmurasan.jsonl";
 
 const supple = "[Enter a blank line to continue.]";
 
