@@ -1,6 +1,9 @@
 const readline = require("readline");
 const fs = require("fs");
 
+// you should change the output file name
+const outputFileName = "test.txt";
+
 const supple = "[Enter a blank line to continue.]";
 
 const rl = readline.createInterface({
@@ -43,7 +46,7 @@ function createCompletion() {
 }
 
 function addFileData(result) {
-  fs.appendFile("test.txt", result, (err) => {
+  fs.appendFile(outputFileName, result, (err) => {
     if (err) throw err;
   });
 }
